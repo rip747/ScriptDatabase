@@ -37,9 +37,14 @@ The following script options are mapped to SSMS options:
 - PrefetchObjects = true; // some sources suggest this may speed things up
 
 # Compiling
+
+You need to have [Sql Server Management Studio](https://go.microsoft.com/fwlink/?LinkID=840946) to get the SMO libraries installed.
+
 You will need [Visual Studio 2015 Community Edition](https://www.visualstudio.com/downloads/)
 
 # Running
+
+You need to have [Sql Server Management Studio](https://go.microsoft.com/fwlink/?LinkID=840946) to get the SMO libraries installed.
 
 From the command line enter the following:
 
