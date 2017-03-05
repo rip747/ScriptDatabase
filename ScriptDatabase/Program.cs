@@ -68,7 +68,7 @@ namespace ScriptDatabase
             scrp.Options.DriIncludeSystemNames = false; // Include system constraint names
             scrp.Options.Bindings = true; // Script Bindings
             scrp.Options.NoCollation = false; // Script Collation (Reverse of SSMS)
-            scrp.Options.DriDefaults = true; // Script Defaults
+            //scrp.Options.DriDefaults = true; // Script Defaults
             scrp.Options.ScriptDrops = false; // Script DROP or Create (set to false to only script creates)
             scrp.Options.ExtendedProperties = true; // Script Extended Properties
             scrp.Options.LoginSid = false; // Script Logins
@@ -79,14 +79,16 @@ namespace ScriptDatabase
             scrp.Options.ChangeTracking = false; // Script Change Tracking
             scrp.Options.ScriptDataCompression = false; // Script Data Compression Options
             scrp.Options.DriAll = true; // to include referential constraints in the script
-            scrp.Options.DriAllConstraints = true; // to include referential constraints in the script
+            //scrp.Options.DriAllConstraints = true; // to include referential constraints in the script
+            //scrp.Options.DriAllKeys = true;
             // scrp.Options.DriForeignKeys = true; // Script Foreign Keys
             // scrp.Options.DriChecks = true; Script Check Constraints
             scrp.Options.FullTextIndexes = true; // Script Full-Text Indexes
             scrp.Options.Indexes = true;   // Script Indexes
             scrp.Options.Triggers = true; // Script Triggers
             scrp.Options.ScriptBatchTerminator = true; // ???
-            scrp.PrefetchObjects = true; // some sources suggest this may speed things up
+            scrp.PrefetchObjects = false; // Need to set to false otherwise primary keys will not be generated.
+            //scrp.Options.DriPrimaryKey = true;
 
             var urns = new List<Urn>();
 
