@@ -46,6 +46,8 @@ You will need [Visual Studio 2015 Community Edition](https://www.visualstudio.co
 
 You need to have [Sql Server Management Studio](https://go.microsoft.com/fwlink/?LinkID=840946) to get the SMO libraries installed.
 
+NOTE: You must have at least Microsoft SQL Server 11.0.6020.0 in order for CONSTRAINTS to be scripted properly. There is a bug in earlier versions that prevent this.
+
 From the command line enter the following:
 
 ScriptDatabase.exe AdventureWorks localhost myuser mypass
