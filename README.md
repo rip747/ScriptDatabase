@@ -8,33 +8,31 @@ I take no credit for coming up with this. I found an awesome answer on [StackOve
 # Options
 The following script options are mapped to SSMS options:
 
-- AnsiPadding = false; // ANSI Padding
-- AppendToFile = false; // Append To File
-- IncludeIfNotExists = false; // Check for object existence
-- ContinueScriptingOnError = false; // Continue scripting on Error
-- ConvertUserDefinedDataTypesToBaseType = false; // Convert UDDTs to Base Types
-- WithDependencies = true; // Generate Scripts for Dependant Objects
-- IncludeHeaders = false; // Include Descriptive Headers
-- DriIncludeSystemNames = false; // Include system constraint names
-- Bindings = true; // Script Bindings
-- NoCollation = false; // Script Collation (Reverse of SSMS)
-- DriDefaults = true; // Script Defaults
-- ScriptDrops = false; // Script DROP or Create (set to false to only script creates)
-- ExtendedProperties = true; // Script Extended Properties
-- LoginSid = false; // Script Logins
-- Permissions = false; // Script Object-Level Permissions
-- ScriptOwner = false; // Script Owner
-- Statistics = false; // Script Statistics
-- ScriptData = false; // Types of data to script (set to false for Schema Only)
-- ChangeTracking = false; // Script Change Tracking
-- ScriptDataCompression = false; // Script Data Compression Options
-- DriAll = true; // to include referential constraints in the script
-- DriAllConstraints = true; // to include referential constraints in the script
-- FullTextIndexes = true; // Script Full-Text Indexes
-- Indexes = true;   // Script Indexes
-- Triggers = true; // Script Triggers
-- ScriptBatchTerminator = true; // ???
-- PrefetchObjects = true; // some sources suggest this may speed things up
+scrp.Options.AnsiPadding = false; // ANSI Padding
+scrp.Options.AppendToFile = false; // Append To File
+scrp.Options.IncludeIfNotExists = false; // Check for object existence
+scrp.Options.ContinueScriptingOnError = false; // Continue scripting on Error
+scrp.Options.ConvertUserDefinedDataTypesToBaseType = false; // Convert UDDTs to Base Types
+scrp.Options.WithDependencies = true; // Generate Scripts for Dependant Objects
+scrp.Options.IncludeHeaders = false; // Include Descriptive Headers
+scrp.Options.DriIncludeSystemNames = false; // Include system constraint names
+scrp.Options.Bindings = true; // Script Bindings
+scrp.Options.NoCollation = false; // Script Collation (Reverse of SSMS)
+scrp.Options.ScriptDrops = false; // Script DROP or Create (set to false to only script creates)
+scrp.Options.ExtendedProperties = true; // Script Extended Properties
+scrp.Options.LoginSid = false; // Script Logins
+scrp.Options.Permissions = false; // Script Object-Level Permissions
+scrp.Options.ScriptOwner = false; // Script Owner
+scrp.Options.Statistics = false; // Script Statistics
+scrp.Options.ScriptData = false; // Types of data to script (set to false for Schema Only)
+scrp.Options.ChangeTracking = false; // Script Change Tracking
+scrp.Options.ScriptDataCompression = false; // Script Data Compression Options
+scrp.Options.DriAll = true; // to include referential constraints in the script
+scrp.Options.FullTextIndexes = true; // Script Full-Text Indexes
+scrp.Options.Indexes = true;   // Script Indexes
+scrp.Options.Triggers = true; // Script Triggers
+scrp.Options.ScriptBatchTerminator = true; // ???
+scrp.PrefetchObjects = false; // Need to set to false otherwise primary keys will not be generated.
 
 # Compiling
 
